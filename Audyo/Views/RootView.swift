@@ -40,7 +40,7 @@ struct RootView: View {
                 }
                 .tag(2)
             }
-            .accentColor(.black)
+            .accentColor(.primary)
             .environmentObject(playerManager)
         }
     }
