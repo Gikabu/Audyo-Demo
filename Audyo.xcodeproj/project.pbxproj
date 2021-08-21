@@ -3,23 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		172DCBD626D110E7001B705C /* AudyoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBD526D110E7001B705C /* AudyoApp.swift */; };
-		172DCBD826D110E7001B705C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBD726D110E7001B705C /* ContentView.swift */; };
+		172DCBD826D110E7001B705C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBD726D110E7001B705C /* RootView.swift */; };
 		172DCBDA26D110EA001B705C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172DCBD926D110EA001B705C /* Assets.xcassets */; };
 		172DCBDD26D110EA001B705C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172DCBDC26D110EA001B705C /* Preview Assets.xcassets */; };
+		172DCBE826D116AC001B705C /* TabContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBE726D116AC001B705C /* TabContentView.swift */; };
+		172DCBEB26D14808001B705C /* ubuntu-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 172DCBEA26D14808001B705C /* ubuntu-bold.ttf */; };
+		172DCBED26D14CA2001B705C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBEC26D14CA2001B705C /* HomeView.swift */; };
+		172DCBF026D1517C001B705C /* AudioStreaming in Frameworks */ = {isa = PBXBuildFile; productRef = 172DCBEF26D1517C001B705C /* AudioStreaming */; };
+		172DCBF226D155C2001B705C /* HomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBF126D155C2001B705C /* HomeItemView.swift */; };
+		172DCBF526D16CC6001B705C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBF426D16CC6001B705C /* Episode.swift */; };
+		172DCBF826D176B7001B705C /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBF726D176B7001B705C /* PlayerManager.swift */; };
+		172DCBFA26D182BF001B705C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DCBF926D182BF001B705C /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		172DCBD226D110E7001B705C /* Audyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Audyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		172DCBD526D110E7001B705C /* AudyoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudyoApp.swift; sourceTree = "<group>"; };
-		172DCBD726D110E7001B705C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		172DCBD726D110E7001B705C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		172DCBD926D110EA001B705C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		172DCBDC26D110EA001B705C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		172DCBDE26D110EA001B705C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172DCBE726D116AC001B705C /* TabContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentView.swift; sourceTree = "<group>"; };
+		172DCBEA26D14808001B705C /* ubuntu-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ubuntu-bold.ttf"; sourceTree = "<group>"; };
+		172DCBEC26D14CA2001B705C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		172DCBF126D155C2001B705C /* HomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemView.swift; sourceTree = "<group>"; };
+		172DCBF426D16CC6001B705C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		172DCBF726D176B7001B705C /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		172DCBF926D182BF001B705C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172DCBF026D1517C001B705C /* AudioStreaming in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,10 +68,13 @@
 		172DCBD426D110E7001B705C /* Audyo */ = {
 			isa = PBXGroup;
 			children = (
-				172DCBD526D110E7001B705C /* AudyoApp.swift */,
-				172DCBD726D110E7001B705C /* ContentView.swift */,
-				172DCBD926D110EA001B705C /* Assets.xcassets */,
+				172DCBF626D1766E001B705C /* View Models */,
+				172DCBF326D16C80001B705C /* Models */,
+				172DCBE926D147E7001B705C /* Fonts */,
+				172DCBE626D111A5001B705C /* Views */,
+				172DCBE426D1112F001B705C /* System */,
 				172DCBDE26D110EA001B705C /* Info.plist */,
+				172DCBD926D110EA001B705C /* Assets.xcassets */,
 				172DCBDB26D110EA001B705C /* Preview Content */,
 			);
 			path = Audyo;
@@ -67,6 +86,50 @@
 				172DCBDC26D110EA001B705C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		172DCBE426D1112F001B705C /* System */ = {
+			isa = PBXGroup;
+			children = (
+				172DCBD526D110E7001B705C /* AudyoApp.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		172DCBE626D111A5001B705C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				172DCBD726D110E7001B705C /* RootView.swift */,
+				172DCBE726D116AC001B705C /* TabContentView.swift */,
+				172DCBEC26D14CA2001B705C /* HomeView.swift */,
+				172DCBF126D155C2001B705C /* HomeItemView.swift */,
+				172DCBF926D182BF001B705C /* PlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		172DCBE926D147E7001B705C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				172DCBEA26D14808001B705C /* ubuntu-bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		172DCBF326D16C80001B705C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				172DCBF426D16CC6001B705C /* Episode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		172DCBF626D1766E001B705C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				172DCBF726D176B7001B705C /* PlayerManager.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +148,9 @@
 			dependencies = (
 			);
 			name = Audyo;
+			packageProductDependencies = (
+				172DCBEF26D1517C001B705C /* AudioStreaming */,
+			);
 			productName = Audyo;
 			productReference = 172DCBD226D110E7001B705C /* Audyo.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +178,9 @@
 				Base,
 			);
 			mainGroup = 172DCBC926D110E7001B705C;
+			packageReferences = (
+				172DCBEE26D1517C001B705C /* XCRemoteSwiftPackageReference "AudioStreaming" */,
+			);
 			productRefGroup = 172DCBD326D110E7001B705C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172DCBEB26D14808001B705C /* ubuntu-bold.ttf in Resources */,
 				172DCBDD26D110EA001B705C /* Preview Assets.xcassets in Resources */,
 				172DCBDA26D110EA001B705C /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				172DCBD826D110E7001B705C /* ContentView.swift in Sources */,
+				172DCBF226D155C2001B705C /* HomeItemView.swift in Sources */,
+				172DCBF526D16CC6001B705C /* Episode.swift in Sources */,
+				172DCBD826D110E7001B705C /* RootView.swift in Sources */,
+				172DCBFA26D182BF001B705C /* PlayerView.swift in Sources */,
+				172DCBF826D176B7001B705C /* PlayerManager.swift in Sources */,
+				172DCBED26D14CA2001B705C /* HomeView.swift in Sources */,
+				172DCBE826D116AC001B705C /* TabContentView.swift in Sources */,
 				172DCBD626D110E7001B705C /* AudyoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -277,7 +353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gikabu.Audyo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gikabu.metatext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,7 +375,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gikabu.Audyo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gikabu.metatext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		172DCBEE26D1517C001B705C /* XCRemoteSwiftPackageReference "AudioStreaming" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Gikabu/AudioStreaming";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		172DCBEF26D1517C001B705C /* AudioStreaming */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172DCBEE26D1517C001B705C /* XCRemoteSwiftPackageReference "AudioStreaming" */;
+			productName = AudioStreaming;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 172DCBCA26D110E7001B705C /* Project object */;
 }

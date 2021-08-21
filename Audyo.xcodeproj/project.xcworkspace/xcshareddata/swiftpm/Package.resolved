@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AudioStreaming",
+        "repositoryURL": "https://github.com/Gikabu/AudioStreaming",
+        "state": {
+          "branch": null,
+          "revision": "566dc86f3f5a9e7847e59dda3a550699a1ec4a0a",
+          "version": "0.5.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
