@@ -14,6 +14,7 @@ struct PlayerView: View {
     @State private var progress: Int = 0
     @State private var timer: Timer? = nil
     @State private var showPause = false
+    @State private var didStart = false
     
     private var audioPlayer: AudioPlayer {
         return playerManager.audioPlayer
@@ -27,6 +28,7 @@ struct PlayerView: View {
         VStack {
             ProgressView(value: Double(progress), total: totalTime)
                 .accentColor(.orange)
+            
             HStack {
                 VStack(alignment: .leading) {
                     Text(episode.title)
@@ -57,22 +59,27 @@ struct PlayerView: View {
             }
             .padding(.horizontal)
         }
-        .frame(height: 70, alignment: .center)
-        .background(Color(UIColor.systemBackground))
+        .frame(height: 60, alignment: .center)
+        .background(Color(UIColor.secondarySystemBackground))
         .onChange(of: playerManager.playingItem, perform: { value in
             if let item = value {
+                didStart = false
                 self.episode = item
-//                resetPlayer()
                 play()
             }
         })
     }
     
     func play() {
-        if let fileUrl = URL(string: episode.url) {
-            showPause = true
-            audioPlayer.play(url: fileUrl)
-            updateSeekBar()
+        if didStart {
+            resume()
+        } else {
+            if let fileUrl = URL(string: episode.url) {
+                showPause = true
+                audioPlayer.play(url: fileUrl)
+                updateSeekBar()
+                didStart = true
+            }
         }
     }
     
@@ -109,10 +116,8 @@ struct PlayerView: View {
     }
     
     func dismissPlayer() {
-        withAnimation {
-            playerManager.dismissPlayer()
-            resetPlayer()
-        }
+        playerManager.dismissPlayer()
+        resetPlayer()
     }
 }
 

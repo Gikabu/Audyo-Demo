@@ -19,11 +19,12 @@ struct TabContentView<Content>: View where Content: View {
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-            VStack {
+            VStack(spacing: 0) {
                 header
                 content()
                 Spacer()
             }
+            .edgesIgnoringSafeArea([.bottom])
             
             if let episode = playerManager.playingItem {
                 PlayerView(episode: episode)
